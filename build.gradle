@@ -6,9 +6,15 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at http://gradle.org/docs/2.2.1/userguide/tutorial_java_projects.html
  */
+ 
+plugins {
+  id 'java'
+  id 'edu.sc.seis.launch4j' version '2.5.1'
+}
 
-// Apply the java plugin to add support for Java
-apply plugin: 'java'
+launch4j {
+  mainClassName = 'SwingDemo'
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
